@@ -73,7 +73,7 @@ resource "aws_security_group_rule" "ap_in_tcp3000" {
 
 #S3へ送信
 resource "aws_security_group_rule" "ap_out_http" {
-  security_group_id = aws_security_group.op_sg.id
+  security_group_id = aws_security_group.ap_sg.id
   type              = "egress"
   protocol          = "tcp"
   from_port         = 80
