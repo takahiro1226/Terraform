@@ -4,6 +4,8 @@
 provider "aws" {
   profile = "terraform"
   region  = "us-east-1"
+  # skip_requesting_account_id = true
+
 }
 
 # ---------------------------------------------
@@ -14,7 +16,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "~> 5.0"
     }
   }
 }
